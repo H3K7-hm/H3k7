@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="icon" href="https://www.raed.net/img?id=1076642" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <title>H3K7. HM</title>
+  <style>
+  body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: none;
+  font-family: 'Amiri', serif;
+}
+
+#intro {
+  font-family: 'Creepster', cursive;
+  font-weight: bolder;
+  font-style: italic;
+  letter-spacing: 0.20em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+#mainContent {
+  display: none;
+}
+
+/*#img-intro {
+  margin-top: 3em;
+  width: 22em;
+  height: 18em;
+  border-radius: 0.80em;
+}
+*/
+h1 {
+  font-size: 3em;
+  color: red;
+  text-shadow: 
+    0 0 5px rgba(0, 0, 0, 1), 
+    0 0 5px rgba(255, 0, 0, 0.7), 
+    0 0 10px rgba(255, 0, 0, 0.7), 
+    0 0 20px rgba(255, 0, 0, 1), 
+    0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+  animation: fadeAnimation 2s infinite;
+}
+
+@keyframes fadeAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.bar {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0.20em 0.10em;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.img-icon {
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0.10em;
+  border-radius: 10em;
+  border: 0.15em solid rgba(70, 130, 180, 0.9);
+}
+
+span {
+  margin-right: 3em;
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  height: 100%;
+  color: black;
+  padding: 0.20em 0.40em;
+  font-size: 0.90em;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.05em;
+  background: none;
+}
+
+.dropdown-content {
+  margin-top: 0.10em;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 5em;
+  box-shadow: 0 0.08em 0.16em 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 0.30em 0.20em;
+  text-decoration: none;
+  display: block;
+  border: 0.07em solid black;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.night-mode {
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  font-family: 'Creepster', cursive;
+  font-weight: bold;
+}
+
+.night-mode h1,
+.night-mode ul,
+.night-mode span,
+.night-mode .btn,
+.night-mode .dropdown-content a,
+.night-mode .info,
+.night-mode .facebook,
+.night-mode .instagram,
+.night-mode .telegram,
+.night-mode .linkdin{
+  font-weight: bold;
+  color: red; 
+  
+}
+
+.day-mode{
+  color: black;
+  padding: 0.60em 0.80em;
+  border: none;
+  font-size: 1em;
+}
+
+.video {
+  width: 95%;
+  height: 60%;
+  margin-top: 2.5em;
+  border-radius: 0.30em;
+  box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  background-color: #A9A9A9;
+  font-weight: bold;
+  width: 12em;
+  margin-top: 1em;
+  padding: 0.10em 0.50em;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 0.20em;
+  transition: transform 0.5s ease;
+  box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.5);
+}
+
+#box {
+  font-weight: bold;
+  background-color: #A9A9A9;
+  margin-left: 1.2em;
+  margin-top: 2em;
+  width: 90%;
+  padding: 0.03em;
+  border: none;
+  border-radius: 0.30em;
+  box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.5);
+}
+
+.info {
+  direction: ltr;
+  text-align: center;
+}
+
+ul {
+  direction: rtl;
+}
+
+.icon {
+  margin-top: 1em;
+  text-align: center;
+  justify-content: center;
+  padding: none;
+}
+
+.facebook {
+  color: rgb(24, 119, 242);
+  font-size: 1.7em;
+}
+
+.instagram {
+  color: rgb(213, 0, 109);
+  font-size: 1.7em;
+  margin-left: 0.50em; 
+}
+
+.telegram {
+  color: rgb(0, 136, 204);
+  font-size: 1.7em;
+  margin-left: 0.50em; 
+}
+
+.linkdin {
+  color: rgb(24, 23, 23);
+  font-size: 1.7em;
+  margin-left: 0.50em; 
+}
+
+.dark {
+    animation: rotation 2s ease forwards;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  </style>
+</head>
+<body>
+  
+  <center>
+  <div id="intro">
+    <img class="fade" id="test" src="https://www.raed.net/img?id=1076642" alt="صورة شخصية" style="margin-top: 3em;width: 22em;height: 18em;border-radius: 0.80em;background-color: #3498db;">
+    <h1 class="fade" id="test">H3K7. HM</h1>
+  </div>
+  </center>
+  
+  <header class="bar">
+    <img class="img-icon" src="https://www.raed.net/img?id=1076642">
+    <span id="siteTitle">H3K7. HM</span>
+    
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">
+        <i id="arrow" class="fas fa-chevron-down"></i> <span id="languageLabel">AR/EG</span>
+      </button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#" onclick="changeLanguage('AR'); toggleDropdown(); return false;">AR</a>
+        <a href="#" onclick="changeLanguage('EG'); toggleDropdown(); return false;">EG</a>
+      </div>
+    </div>
+    <button id="toggle-button" class="day-mode">
+      <i class="fad fa-adjust"></i>
+    </button>
+  </header>
+  
+  <main>
+    <center>
+      <video id="myVideo" class="video">
+        <source src="VID_20241101_115653_144.mp4" type="video/mp4" controls >
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
+      <button class="btn" id="toggleButton">تشغيل</button>
+    </center>
+    <h3 class="info" id="infoTitle">معلومات عني</h3>
+    <div id="box" class="animate-element">
+      <p class="info" id="aboutMe">أنا مطور مواقع، وبشتغل في تصميم وتطوير المواقع الإلكترونية باستخدام لغات برمجة</p>
+      <ul>
+        <li><i>HTML</i></li>
+        <li><i>CSS</i></li>
+        <li><i>JavaScript</i></li>
+      </ul>
+      <p class="info" id="experience">وكمان عندي خبرة في لغة بايثون، وبستخدمها لبناء أدوات اختبار الاختراق</p>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="icon">
+      <a id="icon" class="facebook" href="https://www.facebook.com/profile.php?id=100083176941321&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a id="icon" class="instagram" href="https://www.instagram.com/h3k.7s/profilecard/?igsh=MTJyeGxoZW5wZTdqZA==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a id="icon" class="linkdin" href="https://api.whatsapp.com/send?phone=+201120586701" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a id="icon" class="telegram" href="https://t.me/Ee_S_2" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+  </footer>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script>
+  
+document.body.style.display = "block";
+
+gsap.fromTo("#intro", { opacity: 1 }, { opacity: 0, duration: 1, delay: 9, onComplete: showMainContent });
+
+function showMainContent() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+}
+
+function toggleDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("arrow").classList.toggle("rotate");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+        var arrow = document.getElementById("arrow");
+        arrow.classList.remove("rotate");
+    }
+}
+
+function changeLanguage(lang) {
+    if (lang === 'AR') {
+        document.getElementById("siteTitle").textContent = "H3K7. HM";
+        document.getElementById("infoTitle").textContent = "معلومات عني";
+        document.getElementById("aboutMe").textContent = "أنا مطور مواقع، وبشتغل في تصميم وتطوير المواقع الإلكترونية باستخدام لغات برمجة";
+        document.getElementById("experience").textContent = ". وكمان عندي خبرة في لغة بايثون، وبستخدمها لبناء أدوات اختبار الاختراق";
+        document.getElementById("toggleButton").textContent = "تشغيل";
+        document.getElementById("languageLabel").textContent = "AR/EG";
+    } else {
+        document.getElementById("siteTitle").textContent = "H3K7. HM";
+        document.getElementById("infoTitle").textContent = "About Me";
+        document.getElementById("aboutMe").textContent = "I am a web developer, working on designing and developing websites using programming languages";
+        document.getElementById("experience").textContent = ". Also, I have experience in Python, which I use to build penetration testing tools";
+        document.getElementById("toggleButton").textContent = "Play";
+        document.getElementById("languageLabel").textContent = "EG/AR";
+    }
+}
+
+const button = document.getElementById('toggle-button');
+const body = document.body;
+
+button.addEventListener('click', () => {
+    body.classList.toggle('night-mode');
+    if (body.classList.contains('night-mode')) {
+        button.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        button.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+});
+
+const video = document.getElementById('myVideo');
+const toggleButton = document.getElementById('toggleButton');
+
+toggleButton.addEventListener('click', function() {
+    if (video.paused) {
+        video.play();
+        toggleButton.textContent = (document.getElementById("languageLabel").textContent.includes('AR')) ? 'إيقاف' : 'Pause';
+    } else {
+        video.pause();
+        toggleButton.textContent = (document.getElementById("languageLabel").textContent.includes('AR')) ? 'تشغيل' : 'Play';
+    }
+});
+
+video.addEventListener('ended', function() {
+    toggleButton.textContent = (document.getElementById("languageLabel").textContent.includes('AR')) ? 'تشغيل' : 'Play';
+    video.currentTime = 0;
+});
+
+const addRotateEffect = (element) => {
+    element.addEventListener('click', function() {
+        element.classList.add('dark');
+        setTimeout(() => {
+            element.classList.remove('dark');
+        }, 2000);
+    });
+}
+
+const myElement = document.getElementById('box');
+const test = document.getElementById('test');
+
+if (myElement) addRotateEffect(myElement);
+if (test) addRotateEffect(test);
+
+const scale = document.querySelector('.btn');
+
+scale.addEventListener('click', function() {
+    scale.style.transform = 'scale(1.1)';
+    setTimeout(() => {
+        scale.style.transform = 'scale(1)';
+    }, 2000);
+})
+
+const icon = document.getElementById('icon');
+
+        icon.addEventListener('click', function() {
+            icon.style.transform = 'scale(1.1)';
+
+            // إرجاع العنصر إلى حجمه الأصلي بعد 2 ثانية
+            setTimeout(() => {
+                icon.style.transform = 'scale(1)';
+            }, 2000);
+});
+  </script>
+</body>
+</html>
